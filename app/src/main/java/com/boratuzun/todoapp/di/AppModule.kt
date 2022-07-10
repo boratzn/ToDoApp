@@ -23,7 +23,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideKisilerDao(@ApplicationContext context: Context) : IslerDao {
+    fun provideIslerDao(@ApplicationContext context: Context) : IslerDao {
         val vt = Room.databaseBuilder(context,
             Veritabani::class.java,
             "yapilacaklar.sqlite").createFromAsset("yapilacaklar.sqlite").build()
