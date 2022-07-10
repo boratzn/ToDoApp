@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.boratuzun.todoapp.ui.fragments.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/detayGecis"
+            app:destination="@id/yapilacakIsDetayFragment" />
+        <action
+            android:id="@+id/kayitGecis"
+            app:destination="@id/yapilacakIsKayitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yapilacakIsDetayFragment"
+        android:name="com.boratuzun.todoapp.ui.fragments.YapilacakIsDetayFragment"
+        android:label="fragment_yapilacak_is_detay"
+        tools:layout="@layout/fragment_yapilacak_is_detay" >
+        <argument
+            android:name="yapilacakIs"
+            app:argType="com.boratuzun.todoapp.data.entity.Isler" />
+    </fragment>
+    <fragment
+        android:id="@+id/yapilacakIsKayitFragment"
+        android:name="com.boratuzun.todoapp.ui.fragments.YapilacakIsKayitFragment"
+        android:label="fragment_yapilacak_is_kayit"
+        tools:layout="@layout/fragment_yapilacak_is_kayit" />
+</navigation>
